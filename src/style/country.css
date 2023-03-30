@@ -1,0 +1,49 @@
+:root{
+    --numberColummPlace: 4;
+    --marginPlace: 4%;
+}
+.country {
+    width: 100%;
+    height: fit-content;
+}
+
+.countryContainer {
+    width: 100%;
+    overflow: auto;
+}
+
+.topContent {
+    margin: 2rem 0 3rem 4rem;
+    font-size: clamp(2rem,2.5vw,3rem);
+    font-weight: 700;
+}
+
+.place {
+    margin: 0% 0% var(--marginPlace) var(--marginPlace);
+    width: calc((100% - var(--marginPlace)*(var(--numberColummPlace) + 1))/var(--numberColummPlace));
+    height: 25rem;
+    float: left;
+    box-shadow: 0 0 1.5rem black;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+@media screen and (max-width: 1300px) {
+    :root{
+        --numberColummPlace: 3;
+        --marginPlace: 6%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    :root{
+        --numberColummPlace : 2;
+        --marginPlace: 10%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    :root{
+        --numberColummPlace : 1;
+        --marginPlace: 20%;
+    }
+}

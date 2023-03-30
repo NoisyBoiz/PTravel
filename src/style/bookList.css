@@ -1,0 +1,198 @@
+:root{
+    --widthEmptyBookList: 60vw;
+    --widthLeftEmptyBL:15rem;
+    --paddingLeftREBL:2vw;
+    --widthRightEmptyBL: calc(var(--widthEmptyBookList) - var(--widthLeftEmptyBL) - var(--paddingLeftREBL));
+    --widthLeftBookLC: 22vw;
+    --paddingContentBookLC: 3vw;
+    --widthContentBookLC: calc(var(--widthEmptyBookList) - var(--widthLeftBookLC) - var(--paddingContentBookLC));
+    
+}
+.bookList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleBookList {
+    width: var(--widthEmptyBookList);
+    padding: 0 0.5rem 1rem 0.5rem;
+    margin: 2rem 0 4rem 0;
+    border-bottom: 0.05rem solid rgb(200, 200, 200);
+}
+
+.titleBookList h1 {
+    margin: 0;
+    font-size: clamp(1rem,1rem + 2vw,2rem);
+}
+
+.titleBookList h4 {
+    margin: 0.2rem 0 0 0;
+    font-size: clamp(0.5rem,0.5rem + 1vw,1rem);
+}
+
+.emptyBookList {
+    width: var(--widthEmptyBookList);
+    height: fit-content;
+    box-shadow: 0 0 1rem black;
+    padding: 0.5rem;
+}
+
+.openRightEmptyBL {
+    display: flex;
+}
+
+.closeRightEmptyBL {
+    display: none;
+}
+
+.leftEmptyBL {
+    width: var(--widthLeftEmptyBL);
+    height: 15rem;
+    background-color: rgb(255, 144, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imgEmptyBL {
+    width: 15rem;
+    height: 15rem;
+}
+
+.rightEmptyBL {
+    width: var(--widthRightEmptyBL);
+    padding-left: var(--paddingLeftREBL);
+}
+.rightEmptyWL h1{
+    font-size: clamp(1rem,1rem + 2vw,1.8rem);
+}
+.rightEmptyWL h3{
+    font-size: clamp(0.8rem,0.8rem + 1vw,1.2rem);
+}
+
+.bookListCard {
+    width: var(--widthEmptyBookList);
+    height: fit-content;
+    margin-bottom: 2rem;
+    padding: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 1rem #888888,
+        -0.5rem -0.5rem 0.5rem #ffffff;
+    align-items: center;
+}
+
+.bookListCard:hover {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(255, 100, 0, 0.5),
+        -0.5rem -0.5rem 0.5rem rgba(255, 230, 207, 0.5);
+}
+
+.linkBookListCard {
+    width: 100%;
+    height: 100%;
+}
+.bookListCardContainer {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.leftBookLC {
+    width: var(--widthLeftBookLC);
+    height: 15rem;
+
+}
+
+.imgBookLC {
+    width: 100%;
+    height: 100%;
+}
+
+.contentBookLC {
+    width: var(--widthContentBookLC);
+    height: 15rem;
+    padding-left: var(--paddingContentBookLC);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.eachRBookLC {
+    font-size: clamp(0.9rem,0.9rem + 1vw,1.2rem);
+    padding: 0 0 0.4rem 0;
+    color: rgb(255, 111, 14);
+}
+
+.eachRBookLC:nth-child(1) {
+    font-size: clamp(0.8rem,0.8rem + 1vw,1rem);
+    font-style: italic;
+    position: absolute;
+    top: 0;
+    color: rgb(101, 101, 101);
+}
+
+.eachRBookLC span {
+    font-style: italic;
+    color: rgb(100, 100, 100);
+}
+
+.titleRightBookLC {
+    color: black;
+    font-size: clamp(0.9rem,0.9rem + 1vw,1.2rem);
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    color: rgb(200, 200, 200);
+    transition: all 0.1s ease-in-out;
+}
+
+.BookListCardContainer:hover .titleRightBookLC {
+    color: rgb(255, 42, 0);
+}
+
+.deleteBLC {
+    width: 5rem;
+    height: 4.5rem;
+    padding: 1rem;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 135, 37);
+    box-shadow: 0 0 0.5rem rgb(100, 100, 100);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.deleteBLC:hover {
+    box-shadow: 0 0 1rem rgb(255, 135, 37);
+}
+
+.imgDeleteWLC {
+    width: clamp(3vw,3.5vw,5vw);
+    height: clamp(3vw,3.5vw,5vw);
+}
+
+.deleteWLC p {
+    margin: 0;
+    font-size: clamp(0.6rem,0.6rem + 1vw,1.2rem);
+}
+
+@media screen and (max-width: 1000px){
+    :root{
+        --widthLeftEmptyBL:60vw;
+        --widthRightEmptyBL: 60vw;
+        --paddingLeftREBL:0;
+        --widthLeftBookLC: 60vw;
+        --paddingContentBookLC: 0;
+        --widthContentBookLC: 60vw;
+    }
+    .emptyBookList{
+        flex-direction: column;
+    }
+    .bookListCardContainer {
+        flex-direction: column;
+    }
+}

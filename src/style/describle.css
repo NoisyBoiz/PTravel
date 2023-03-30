@@ -1,0 +1,570 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
+
+:root{
+    --widthLeftDescrible: 55vw;
+    --widthRightDescrible: 25vw;
+    --marginTopRightDescrible: 6rem;
+    --heightImageDescrible: 30rem;
+}
+.describle {
+    width: 100%;
+    height: 100%;
+    transition: all 0.5s ease-in-out;
+    overscroll-behavior: none;
+}
+
+.describleContainer {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: row;
+    background-color: rgb(255, 255, 255);
+}
+
+.closeDescrible {
+    padding: 0.4rem 0.8rem 0.4rem 0.8rem;
+    color: rgb(255, 120, 0);
+    border: 0.1rem solid rgb(255, 120, 0);
+    cursor: pointer;
+    position: absolute;
+    top: 2rem;
+    right: 6vw;
+    transition: all 0.15s ease-in-out;
+}
+
+.closeDescrible:hover {
+    background-color: rgb(255, 120, 0);
+    color: rgb(255, 255, 255);
+}
+
+.leftDescrible {
+    margin-top: 4rem;
+    width: var(--widthLeftDescrible);
+}
+
+.iconTLDTitle {
+    display: flex;
+    flex-direction: row;
+}
+
+.iconTLDTitle span {
+    font-style: italic;
+    font-size: 1.2rem;
+}
+
+
+/* button add to wishlist */
+
+.addTWishContainer {
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+.addTWishContainer:hover {
+    box-shadow: 0 0 0.5rem rgb(200, 200, 200);
+}
+
+.addTWishContainer:hover span {
+    color: red;
+}
+
+.addTWishContainer:hover #unselectIconAddTWish {
+    text-shadow: 0 0 0.2rem red;
+}
+
+.addTWishContainer:hover #unselectSpanAddTWish {
+    color: red;
+}
+
+#selectIconAddTWish {
+    color: red;
+    text-shadow: 0 0 0.2rem red;
+}
+
+#selectSpanAddTWish {
+    color: red;
+}
+
+#unselectIconAddTWish {
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 0.2rem rgb(170, 170, 170);
+    transition: all 0.5s ease-in-out;
+}
+
+#unselectSpanAddTWish {
+    color: rgb(170, 170, 170);
+    transition: all 0.5s ease-in-out;
+}
+
+/* button share */
+
+.shareContainer {
+    display: flex;
+    flex-direction: row;
+    transition: all 0.5s ease-in-out;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.shareContainer:hover {
+    box-shadow: 0 0 0.5rem rgb(200, 200, 200);
+}
+
+.shareContainer div {
+    color: rgb(180, 180, 180);
+    padding: 0.5rem 0.8rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.shareContainer div>span {
+    padding-left: 0.5rem;
+}
+
+.shareContainer:hover div {
+    color: rgb(0, 247, 255);
+}
+
+.iconShareContainer {
+    width: 0rem;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+}
+
+.shareContainer:hover .iconShareContainer {
+    width: fit-content;
+}
+
+.iconShareContainer li {
+    width: 1.5rem;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    opacity: 0;
+    margin: 0;
+    transform: translateX(-20rem);
+    transition: all 0.2s ease-in-out;
+}
+
+.shareContainer:hover li {
+    opacity: 1;
+    transform: translateX(0);
+    border-left: 0.1rem dashed rgb(230, 230, 230);
+}
+
+.iconShareContainer li:nth-child(1):hover {
+    background-color: rgb(255, 61, 132);
+    color: rgb(255, 255, 255);
+}
+
+.iconShareContainer li:nth-child(2):hover {
+    background-color: rgb(255, 251, 32);
+    color: rgb(255, 255, 255);
+}
+
+.iconShareContainer li:nth-child(3):hover {
+    background-color: rgb(35, 255, 112);
+    color: rgb(255, 255, 255);
+}
+
+.iconShareContainer li:nth-child(4):hover {
+    background-color: rgb(0, 229, 255);
+    color: rgb(255, 255, 255);
+}
+
+.titleTLD h1 {
+    margin: 0;
+    border-top: 0.05rem solid rgb(200, 200, 200);
+    padding: 1rem 0 0 0;
+}
+
+.underTitleTLD {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.underTitleTLD h4:nth-child(1) {
+    padding: 0.3rem 1.5rem 0.3rem 0rem;
+}
+
+.underTitleTLD h4 {
+    margin: 1rem 0 1rem 0;
+    padding: 0.3rem 1.5rem 0.3rem 1.5rem;
+    border-right: 0.08rem dashed rgb(180, 180, 180);
+}
+
+.underTitleTLD span {
+    color: rgb(150, 150, 150);
+    font-weight: 100;
+    font-style: italic;
+}
+
+.underTitleTLD p {
+    margin: 0;
+    padding: 0.4rem 0 0 0;
+}
+
+.costDescrible {
+    color: rgb(240, 100, 0);
+}
+
+.rateDescrible {
+    display: flex;
+    flex-direction: column;
+}
+
+.imageDescrible {
+    width: 100%;
+    height: var(--heightImageDescrible);
+}
+
+.bottomLeftDescrible {
+    padding-bottom: 4rem;
+}
+
+.bottomLeftDescrible h2 {
+    margin: 2rem 0 1rem 0;
+}
+
+.bottomLeftDescrible h3 {
+    margin: 0;
+    font-weight: 200;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-family: 'Roboto Condensed', sans-serif;
+    color: rgb(80, 80, 80);
+}
+
+/* right side */
+.rightDescrible {
+    width: var(--widthRightDescrible);
+    height: fit-content;
+    margin-top: var(--marginTopRightDescrible);
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* background-color: rgba(255, 140, 0, 0.1); */
+    border: 0.15rem dashed rgb(200, 200, 200);
+    border-radius: 0.5rem;
+    box-shadow: 0 0 0.5rem rgb(150, 150, 150);
+}
+
+.bookForm {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.titleTopBookForm {
+    font-size: 2rem;
+    margin: 2rem 0 0.5rem 0;
+}
+
+.infoBook {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.infoBook input {
+    width: 65%;
+    margin: 0.5rem 0 0 0;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    border-style: solid;
+}
+
+.infoBook input:focus {
+    outline: 0.1rem solid rgb(255, 153, 0);
+    border-color: transparent;
+}
+
+.infoBook input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.timeBook {
+    width: 65%;
+    margin: 0.5rem 0 0 0;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 0.1rem solid transparent;
+    background-color: rgba(255, 193, 138, 0.2);
+}
+
+.timeBook span {
+    font-size: 1rem;
+    margin: 0 0 0.5rem 0;
+}
+
+.radioBoxContainer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.radioBoxContainer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.radioBoxContainer input[type="radio"] {
+    margin: 0 0.3rem 0 0;
+    appearance: none;
+    width: 0.8rem;
+    height: 0.8rem;
+    border: 0.05rem solid #555555;
+    border-radius: 50%;
+    background-clip: content-box;
+    padding: 0.1rem;
+}
+
+.radioBoxContainer input[type="radio"]:checked {
+    background-color: rgb(255, 100, 0);
+    border-color: rgb(255, 100, 0);
+}
+
+.ticketBook {
+    width: 65%;
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    margin: 1rem 0 1rem 0;
+    border-top: 0.08rem dashed rgb(200, 200, 200);
+    border-bottom: 0.08rem dashed rgb(200, 200, 200);
+}
+
+.ticketBookBorder {
+    outline: 0.1rem solid orangered;
+}
+
+.ticketBook span {}
+
+.ticketBookContainer {}
+
+.ticketBookContainer div {
+    width: 100%;
+    margin: 0.5rem 0 0.5rem 0;
+}
+
+.ticketBookContainer label {
+    color: rgb(150, 150, 150);
+    font-style: italic;
+}
+
+.ticketBookContainer span {
+    margin: 0;
+    font-weight: 600;
+}
+
+.ticketBookContainer input {
+    width: 2.5rem;
+    float: right;
+}
+
+.ticketBookContainer input:focus {
+    outline: 0.1rem solid rgb(255, 153, 0);
+    border-color: transparent;
+}
+
+.messageBook {
+    width: 65%;
+    height: 5rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: 0.05rem solid black;
+}
+
+.messageBook:focus {
+    outline: 0.1rem solid rgb(255, 153, 0);
+    border-color: transparent;
+}
+
+.totalBook {
+    width: 65%;
+    margin: 1rem 0 0 0;
+    border-top: 0.09rem dashed rgb(200, 200, 200);
+    padding: 0.8rem 1rem 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.totalBook h2 {
+    margin: 0;
+}
+
+.acceptBook {
+    width: 65%;
+    margin-bottom: 3rem;
+    padding: 0.6rem 1rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: aliceblue;
+    border: 0.1rem solid rgb(255, 120, 0);
+    background-color: rgb(255, 120, 0);
+    position: relative;
+    z-index: 1;
+    transition: all 0.5s ease-in-out;
+}
+
+.acceptBook:hover {
+    background-color: rgb(255, 255, 255);
+    color: rgb(255, 120, 0);
+}
+
+/* scrollbar style */
+/* 
+.describleContainer::-webkit-scrollbar-track{
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+	background-color: #ffffff;
+}
+.describleContainer::-webkit-scrollbar{
+	width: 10px;
+	background-color: #ffffff;
+}
+.describleContainer::-webkit-scrollbar-thumb{
+	background-image: -webkit-gradient(linear,left bottom,left top,
+									   color-stop(0.44, rgb(122,153,217)),
+									   color-stop(0.72, rgb(73,125,189)),
+									   color-stop(0.86, rgb(28,58,148)));
+}
+.describleContainer::-webkit-scrollbar-thumb:hover{
+	background-image: -webkit-gradient(linear,left bottom,left top,
+									   color-stop(0.44, rgb(103, 140, 215)),
+									   color-stop(0.72, rgb(32, 107, 200)),
+									   color-stop(0.86, rgb(0, 44, 175)));
+} */
+
+.alertComfirmBook {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    display: none;
+    opacity: 0;
+    background-color: rgba(38, 38, 38, 0.8);
+    overscroll-behavior-block: contain;
+    transition: all 0.5s ease-in-out;
+}
+
+.alertComfirmBookContainer {
+    width: 30%;
+    height: 40%;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-origin: top left;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    animation: alertAni 0.5s ease-in-out;
+}
+
+.alertComfirmBookContainer i {
+    font-size: 4.5rem;
+    color: rgb(255, 146, 22);
+    animation: alertIconAni 1s ease-in-out;
+}
+
+.alertComfirmBookContainer {
+    text-align: center;
+    margin: 0;
+}
+
+.alertComfirmBookContainer h1 {
+    margin: 0;
+}
+
+.alertComfirmBookContainer h3 {
+    margin: 0;
+}
+
+.alertComfirmBookContainer div {
+    width: 30%;
+    padding: 2%;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.2rem;
+    background-color: rgb(255, 132, 23);
+    border: 0.1rem solid rgb(255, 132, 23);
+    transition: all 0.5s ease-in-out;
+}
+
+.alertComfirmBookContainer div:hover {
+    color: rgb(255, 132, 23);
+    background-color: rgb(255, 255, 255);
+}
+
+@keyframes alertAni {
+    0% {
+        transform: scale(0.5) translate(-50%, -50%);
+    }
+
+    100% {
+        transform: scale(1) translate(-50%, -50%);
+    }
+}
+
+@keyframes alertIconAni {
+    0% {
+        transform: rotate(90deg);
+        color: transparent;
+    }
+
+    100% {
+        transform: rotate(0);
+        color: rgb(255, 146, 22);
+    }
+}
+
+.alertClass {
+    border-color: orangered;
+}
+
+@media screen and (max-width: 1200px) {
+    :root{
+        --widthLeftDescrible: 80vw;
+        --widthRightDescrible: 50vw;
+        --marginTopRightDescrible: 2rem;
+        --heightImageDescrible: 25rem;
+    }
+    .describleContainer{
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    :root{
+        --widthLeftDescrible: 80vw;
+        --widthRightDescrible: 70vw;
+        --marginTopRightDescrible: 2rem;
+        --heightImageDescrible: 20rem;
+    }
+    .describleContainer{
+        flex-direction: column;
+    }
+}

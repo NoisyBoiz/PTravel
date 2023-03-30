@@ -1,0 +1,539 @@
+:root {
+    --widthLeftMainContent: 55vw;
+    --widthRightMainContent: 35vw;
+
+    --heightCardMainContent: 13rem;
+    --widthImageCard: 13vw;
+
+    --widthHomeBottomContent: 70vw;
+    --marginBoxHBC: 2vw;
+    --numberColummBoxHBC: 4;
+}
+
+.home {
+    width: 100vw;
+}
+
+/* top home */
+/* left main content */
+
+.homeTop {
+    position: relative;
+}
+
+.slideContainer {
+    width: 100vw;
+    height: 30rem;
+    display: flex;
+}
+
+.boxImageSlide, .imageSlide {
+    width: 100vw;
+    height: 30rem;
+}
+
+.homeTopTitle {
+    width: 100vw;
+    height: 30rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.homeTopTitle p {
+    font-size: clamp(2.5rem,5vw,6rem);
+    font-weight: 900;
+    color: rgb(255, 255, 255);
+    margin: 2rem 1rem 1rem 4rem;
+}
+
+.homeTopTitle h3 {
+    font-size: clamp(1rem,2vw,1.3rem);
+    color: rgb(255, 255, 255);
+    margin: 0rem 1rem 2rem 4rem;
+}
+
+.buttonContainer {
+    width: 100vw;
+    position: absolute;
+    z-index: 1;
+    top: 90%;
+    display: flex;
+    justify-content: center;
+}
+
+.buttonSlide {
+    width: 1rem;
+    height: 1rem;
+    margin: 0.2rem;
+    border-radius: 50%;
+    border: none;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+/* home main content */
+
+.welcome {
+    text-align: center;
+}
+
+.welcome h1 {
+    font-size: clamp(2rem,4vw,3rem);
+    margin: 2rem 0 1rem 0;
+}
+
+.welcome h4 {
+    font-size: clamp(0.7rem, 1.5vw,1rem);
+    margin: 0rem 0 2rem 0;
+}
+
+.mainContent {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.leftMainContent {
+    width: var(--widthLeftMainContent);
+}
+
+.cardMainContent {
+    width: calc(var(--widthLeftMainContent) * 0.85);
+    height: var(--heightCardMainContent);
+    box-shadow: 0 0 1rem rgb(0, 0, 0);
+    margin: 1rem 0 1rem 0;
+    position: relative;
+}
+
+.moutainImageCard,.forestImageCard,.beachImageCard {
+    width: var(--widthImageCard);
+    height: var(--heightCardMainContent);
+    position: relative;
+    z-index: 1;
+    background-size: var(--widthImageCard) var(--heightCardMainContent);
+    background-repeat: no-repeat;
+}
+.moutainImageCard,.beachImageCard{
+    float: left;
+    clip-path: polygon(0 0, 90% 0%, 60% 100%, 0 100%);
+    shape-outside: polygon(0 0, 100% 0%, 70% 100%, 0% 100%);
+}
+.moutainImageCard{
+    background-image: linear-gradient(180deg, #000000 0%, transparent 50%), url("./Home/moutain.jpg");
+}
+.forestImageCard{
+    float: right;
+    clip-path: polygon(10% 0, 100% 0%, 100% 100%, 40% 100%);
+    shape-outside: polygon(0% 0, 100% 0%, 100% 100%, 30% 100%);
+    background-image: linear-gradient(180deg, #000000 0%, transparent 50%), url("./Home/forest.jpg");
+}
+.beachImageCard{
+    background-image: linear-gradient(180deg, #000000 0%, transparent 50%), url("./Home/beach.jpg");
+}
+
+.moutainMainCard, .beachMainCard {
+    float: left;
+}
+
+.forestMainCard {
+    float: right;
+}
+
+.titleImageCard {
+    height: var(--heightCardMainContent);
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.titleImageCard span {
+    font-size: clamp(0.8rem,2vw,1.1rem);
+}
+
+.endMoutainImageCard, .endBeachImageCard {
+    width: var(--widthImageCard);
+    height: var(--heightCardMainContent);
+    float: right;
+    transition: background-color 0.5s ease-in-out;
+    clip-path: polygon(40% 0%, 100% 0%, 100% 100%, 10% 100%);
+    shape-outside: polygon(30% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+.endMoutainImageCard {
+    background-color: rgb(255, 40, 110);
+}
+.endBeachImageCard {
+    background-color: rgb(0, 210, 255);
+}
+.endMoutainImageCard:hover {
+    background-color: rgb(205, 0, 70);
+}
+.endBeachImageCard:hover {
+    background-color: rgb(0, 160, 215);
+}
+.endMoutainImageCard p, .endBeachImageCard p {
+    font-size: clamp(0.8rem,2vw,1.5rem);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    right: calc(var(--widthImageCard)*0.15);
+    transform: translate(0%, -50%);
+    transition: all 0.5s ease-in-out;
+}
+.endMoutainImageCard:hover p, .endBeachImageCard:hover p {
+    right: calc(var(--widthImageCard)*0.1);
+    color: white;
+    text-shadow: 0 0 1rem white;
+}
+
+.endMoutainImageCard p::before, .endBeachImageCard p::before {
+    content: "》";
+    font-size: clamp(0.8rem,2vw,1.5rem);
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+    transform: translate(0%, -50%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    color: white;
+}
+
+.endMoutainImageCard:hover p::before,.endBeachImageCard:hover p::before, .endForestImageCard:hover p::before {
+    opacity: 1;
+    left: -1.2rem;
+}
+
+.endForestImageCard {
+    width: var(--widthImageCard);
+    height: var(--heightCardMainContent);
+    float: left;
+    background-color: rgb(255, 255, 45);
+    transition: background-color 0.5s ease-in-out;
+    clip-path: polygon(0% 0%, 60% 0%, 90% 100%, 0% 100%);
+    shape-outside: polygon(0% 0%, 70% 0%, 100% 100%, 0% 100%);
+}
+
+.endForestImageCard p {
+    font-size: clamp(0.8rem,2vw,1.5rem);
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: calc(var(--widthImageCard)*0.15);
+    transform: translate(0%, -50%);
+    transition: all 0.5s ease-in-out;
+}
+
+.endForestImageCard p::before {
+    content: "》";
+    font-size: clamp(0.8rem,2vw,1.5rem);
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+    transform: translate(0%, -50%);
+    transition: all 0.5s ease-in-out;
+    opacity: 0;
+    color: white;
+}
+
+.endForestImageCard:hover {
+    background-color: rgb(200, 200, 0);
+}
+
+.endForestImageCard:hover p {
+    left: calc(var(--widthImageCard)*0.2);
+    color: white;
+    text-shadow: 0 0 1rem white;
+}
+
+/* right main content */
+
+.rightMainContent {
+    width: var(--widthRightMainContent);
+    height: 43rem;
+    margin: 1rem 0 1rem 0;
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.topRightMC {
+    width: 100%;
+    font-size: clamp(1rem,5vw,2rem);
+    text-align: center;
+    color: rgb(255, 255, 255);
+}
+
+.cardRightMCContainer {
+    width: 100%;
+}
+
+.cardRightMC {
+    width: 41%;
+    margin: 0 0 2rem 6%;
+    float: left;
+}
+
+.topCardRMC {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.topCardRMC p {
+    color: rgb(255, 255, 255);
+    padding-left: 5%;
+    font-size: clamp(0.8rem,1.8vw,1.3rem);
+    margin: 0;
+}
+
+.iconCardRMC {
+    font-size: clamp(1.5rem,2.5vw,2rem);
+    color: rgb(255, 255, 255);
+}
+
+.titleCardRMC {
+    display: flex;
+    flex-direction: column;
+}
+
+.titleCardRMC span {
+    height: 4rem;
+    color: rgb(255, 255, 255);
+    font-size: clamp(0.7rem,1.8vw,1rem);
+    margin-top: 0.5rem;
+}
+
+.titleCardRMC button {
+    display: inline-block;
+    margin-top: 0.5rem;
+    width: 70%;
+    border: 0;
+    border-radius: 1rem;
+    padding: clamp(0.3rem,1vw,0.5rem) clamp(0.5rem,1vw,0.8rem) clamp(0.3rem,1vw,0.5rem) clamp(0.5rem,1vw,0.8rem);
+    color: #000000;
+    font-size: clamp(0.6rem,1.8vw,0.8rem);
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1) 0s, box-shadow 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s, color 0.167s cubic-bezier(0.4, 0, 0.2, 1) 0s;
+}
+
+#titleCardRMCButton1 {
+    background-color: #ff006a;
+}
+
+#titleCardRMCButton1:hover {
+    box-shadow: 0 0 1rem #ff006a;
+}
+
+#titleCardRMCButton2 {
+    background-color: #ffb222;
+}
+
+#titleCardRMCButton2:hover {
+    box-shadow: 0 0 1rem #ffb222;
+}
+
+#titleCardRMCButton3 {
+    background-color: rgb(251, 255, 0);
+}
+
+#titleCardRMCButton3:hover {
+    box-shadow: 0 0 1rem rgb(251, 255, 0);
+}
+
+#titleCardRMCButton4 {
+    background-color: #00ff44;
+}
+
+#titleCardRMCButton4:hover {
+    box-shadow: 0 0 1rem #00ff44;
+}
+
+#titleCardRMCButton5 {
+    background-color: #00d5ff;
+}
+
+#titleCardRMCButton5:hover {
+    box-shadow: 0 0 1rem #00d5ff;
+}
+
+#titleCardRMCButton6 {
+    background-color: rgb(250, 0, 255);
+}
+
+#titleCardRMCButton6:hover {
+    box-shadow: 0 0 1rem rgb(250, 0, 255);
+}
+
+/* home bottom */
+
+.homeBottom {
+    width: 100%;
+    height: fit-content;
+    position: relative;
+}
+
+.titleHomeBottom {
+    margin-top: 4rem;
+    height: fit-content;
+    text-align: center;
+}
+
+.homeBottomContent {
+    width: var(--widthHomeBottomContent);
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    overflow: auto;
+}
+
+.boxHBC {
+    float: left;
+    position: relative;
+    box-shadow: 0 0 0.5rem rgb(0, 0, 0);
+    background-size: 100% 100%;
+    background-position: center;
+    border: 0;
+    transition: all 0.5s ease-in-out;
+    margin: var(--marginBoxHBC) 0 0 var(--marginBoxHBC);
+}
+.boxHBC:hover {
+    background-size: 108% 108%;
+}
+.boxHBC::after{
+    text-decoration: underline;
+    color: #ffffff;
+    position: absolute;
+    transition: all 0.5s ease-in-out;
+}
+.boxHBC:nth-child(n+3){
+    width: calc((var(--widthHomeBottomContent) - var(--marginBoxHBC)*(var(--numberColummBoxHBC) + 1)) / var(--numberColummBoxHBC));
+    height: calc((var(--widthHomeBottomContent) - var(--marginBoxHBC)*(var(--numberColummBoxHBC) + 1)) / var(--numberColummBoxHBC));
+}
+
+.boxHBC:nth-child(n+3)::after{
+    content: "Best place";
+    font-size: clamp(0.8rem,2.5vw,1.5rem);
+    bottom: 1.3vw;
+    left: 1.3vw;
+}
+.boxHBC1 {
+    width: calc((var(--widthHomeBottomContent) - var(--marginBoxHBC)*(var(--numberColummBoxHBC)/2 + 1)) / (var(--numberColummBoxHBC)/2));
+    height: calc((var(--widthHomeBottomContent) - var(--marginBoxHBC)*(var(--numberColummBoxHBC)/2 + 1)) / (var(--numberColummBoxHBC)/2));
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 50%), url('./News/1.jpg');
+}
+
+.boxHBC1::after {
+    content: "Top 10 địa điểm du lịch";
+    font-size: clamp(1.2rem,2.5vw,2rem);
+    bottom: 2rem;
+    left: 2rem;
+}
+
+.boxHBC2 {
+    width: calc((var(--widthHomeBottomContent) - var(--marginBoxHBC)*(var(--numberColummBoxHBC)/2 + 1)) / (var(--numberColummBoxHBC)/2));
+    height: calc((var(--widthHomeBottomContent) - var(--marginBoxHBC)*(var(--numberColummBoxHBC) + 1)) / var(--numberColummBoxHBC));
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 50%), url('./News/2.jpg');
+}
+
+.boxHBC2::after {
+    content: "Địa điểm du lịch đẹp";
+    font-size: clamp(1.2rem,2.5vw,2rem);
+    bottom: 2vw;
+    left: 2vw;
+}
+
+.boxHBC3 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 50%), url('./News/3.jpg');
+}
+
+.boxHBC4 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 50%), url('./News/4.jpg');
+}
+
+.boxHBC5 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 50%), url('./News/5.jpg');
+}
+
+.boxHBC6 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 50%), url('./News/6.jpg');
+}
+
+.boxHBC7 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 50%), url('./News/7.jpg');
+}
+
+.boxHBC8 {
+    background-image: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, transparent 50%), url('./News/8.jpg');
+}
+
+@media screen and (max-width: 1200px) {
+    :root{
+        --widthLeftMainContent: 90vw;
+        --widthRightMainContent: 90vw;
+        --numberColummBoxHBC: 2;
+        --widthImageCard: 18vw;
+        --heightCardMainContent: 13rem;
+    }
+    .mainContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightMainContent{
+        height: 30rem;
+    }
+    .cardRightMC{
+        width: 28%;
+        margin: 0 0 2rem 4%;
+    }
+}
+@media screen and (max-width: 1000px) {
+    :root{
+        --widthLeftMainContent: 90vw;
+        --widthRightMainContent: 90vw;
+        --numberColummBoxHBC: 2;
+        --widthImageCard: 18vw;
+        --heightCardMainContent: 10rem;
+    }
+    .mainContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightMainContent{
+        height: 30rem;
+    }
+    .cardRightMC{
+        width: 28%;
+        margin: 0 0 2rem 4%;
+    }
+
+}
+@media screen and (max-width: 800px) {
+    :root{
+        --widthLeftMainContent: 90vw;
+        --widthRightMainContent: 90vw;
+        --numberColummBoxHBC: 2;
+        --widthImageCard: 20vw;
+        --heightCardMainContent: 10rem;
+    }
+    .mainContent{
+        flex-direction: column;
+        align-items: center;
+    }
+    .rightMainContent{
+        height: 30rem;
+    }
+    .cardRightMC{
+        width: 28%;
+        margin: 0 0 2rem 4%;
+    }
+}
+@media screen and (max-width: 500px) {
+    .cardMainContent {
+        width: var(--widthLeftMainContent);
+    }
+}

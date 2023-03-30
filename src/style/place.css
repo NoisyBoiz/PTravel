@@ -1,0 +1,78 @@
+.placeContainer{
+    width: 100%;
+}
+.topPlaceContainer {
+    width: 100%;
+    height: 15rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.imageDemo {
+    width: 100%;
+    height: 100%;
+}
+
+.topPlaceContainer::after {
+    content: "Chi Tiết";
+    width: 120%;
+    height: 120%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+    transform: translate(-50%, -50%);
+    font-size: 1.5rem;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.3);
+    opacity: 1;
+    outline: 0.1rem solid rgb(255, 153, 0);
+    outline-offset: -1.5rem;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.place:hover .topPlaceContainer::after {
+    opacity: 1;
+    width: 100%;
+    height: 100%;
+}
+
+.place:hover {
+    box-shadow: 0 0 3rem rgb(255, 173, 9);
+}
+
+.bottomPlaceContainer {
+    width: 100%;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.bottomPlaceContainer span {
+    margin: 0;
+    color: rgb(0, 0, 0);
+    font-style: italic;
+}
+
+.bottomPlaceContainer div {
+    color: rgb(233, 128, 0);
+}
+
+.eachBottom {
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+}
+
+.yellowStar {
+    color: rgb(255, 221, 0);
+    text-shadow: 0 0 0.1rem black;
+}
+
+.whileStar {
+    color: rgb(225, 225, 225);
+    text-shadow: 0 0 0.1rem black;
+}

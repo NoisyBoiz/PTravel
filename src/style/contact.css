@@ -1,0 +1,133 @@
+.contact, .contactContainer, .contactTitle {
+    width: 100%;
+}
+.contactTitle h1{
+    font-size: clamp(1.2rem, 1.2rem + 1vw, 2rem);
+}
+
+.contactContent {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.leftContact {
+    width: 45%;
+}
+
+.contactFrom {
+    width: 100%;
+}
+
+.contactForm input {
+    width: 42%;
+    padding: 2% 3%;
+    border: 0;
+    margin-top: 1rem;
+    outline: 0.1rem solid rgb(226, 193, 171);
+}
+
+.contactForm input:focus {
+    outline: 0.1rem solid rgb(255, 100, 0);
+}
+
+.contactForm input::placeholder {
+    font-style: italic;
+}
+
+.contactForm input:nth-child(2n+1) {
+    float: left;
+}
+
+.contactForm input:nth-child(2n) {
+    float: right;
+}
+
+.contactForm input[type=submit] {
+    width: calc(100%);
+    float: left;
+    font-size: 1rem;
+    color: rgb(255, 255, 255);
+    outline: 0;
+    background-color: rgb(255, 130, 47);
+}
+
+.contactForm textarea {
+    width: 94%;
+    height: 5rem;
+    padding: 2% 3%;
+    margin-top: 1rem;
+    float: left;
+    border: 0;
+    outline: 0.1rem solid rgb(226, 193, 171);
+}
+
+.contactForm textarea:focus {
+    outline: 0.1rem solid rgb(255, 100, 0);
+}
+
+.contactForm textarea::placeholder {
+    font-style: italic;
+}
+
+/* right contact */
+
+.rightContact {
+    width: 30%;
+    margin-top: 8rem;
+}
+.rightContactContainer{
+    width: 80%;
+    padding: 10%;
+    border-left: 0.1rem dashed rgb(200, 200, 200);
+   
+}
+
+.single-contact {
+    width: 100%;
+    height: fit-content;
+    margin-bottom: 2rem;
+}
+.single-contact:nth-last-child(1){
+    margin: 0;
+}
+
+.single-contact i {
+    float: left;
+    width: 3rem;
+    height: 3rem;
+    margin-right: 1rem;
+    line-height: 3rem;
+    text-align: center;
+    font-size: 1.2rem;
+    color: rgb(255, 255, 255);
+    background-color: rgb(255, 140, 39);
+}
+
+.single-contact h4 {
+    margin: 0;
+}
+
+.single-contact p {
+    margin: 0.1rem 0 0 0;
+}
+
+@media screen and (max-width: 1000px) {
+    .contactContent{
+        flex-direction: column;
+    }
+    .leftContact{
+        width: 70%;
+    }
+    .rightContact{
+        width: 70%;
+        margin-top: 4rem;
+    }
+}
+@media screen and (max-width: 700px){
+    .contactForm input{
+        width: 94%;
+    }
+}

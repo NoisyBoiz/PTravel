@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap');
+
+.navBar {
+    width: 100vw;
+    position: fixed;
+    z-index: 2;
+    height: 5rem;
+
+    background-color: rgb(33, 33, 33);
+}
+
+#titleNavbar {
+    margin: 0;
+    padding: 0 2rem 0 3rem;
+    color: rgb(255, 255, 255);
+    font-size: clamp(2rem,2vw,2.5rem);
+    font-family: 'Dancing Script', cursive;
+    position: absolute;
+    top:50%;
+    transform: translate(0,-50%);
+}
+
+.rightSide {
+    width: 40vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-right: 5rem;
+    position: absolute;
+    top:50%;
+    right: 0;
+    transform: translate(0,-50%);
+}
+
+.rightSide a {
+    text-decoration: none;
+}
+.rightSide a:nth-child(1) > .textNavBar{
+    color:#FD5825;
+}
+.textNavBar {
+    padding: 0.1rem;
+    text-align: center;
+    font-size: clamp(0.9rem,1.5vw,1.1rem);
+    color: #ffffff;
+    text-decoration: none;
+    border-bottom: 0.1rem solid transparent;
+    transition: all 0.15s ease-in-out;
+}
+
+.textNavBar:hover {
+    border-color: #FD5825;
+}
+.dropDown {
+    padding: 0 1rem 0.6rem 1rem;
+    display: flex;
+    flex-direction: column;
+    border: 0.05rem solid rgb(255, 255, 255);
+    background-color:  #2C2C2C;
+    position: absolute;
+}
+#open {
+    display: block;
+}
+
+#close {
+    display: none;
+}
+
+.eachDrop {
+    font-size: clamp(0.9rem,1.5vw,1.1rem);
+    color: #ffffff;
+    text-align: left;
+    padding: 0.7rem 0.2rem 0.1rem 0.2rem;
+    border-bottom: 0.05rem solid rgb(100, 100, 100);
+    transition: all 0.15s ease-in-out;
+    display: block;
+}
+
+.eachDrop:hover {
+    border-color: #FD5825;
+}
+

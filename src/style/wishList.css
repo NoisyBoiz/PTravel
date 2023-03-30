@@ -1,0 +1,228 @@
+:root{
+    --widthEmptyWishList: 60vw;
+    --heightEmptyWishList: 15rem;
+    --widthLeftEmptyWL:15rem;
+    --paddingLeftREWL:2vw;
+
+    --widthRightEmptyWL: calc( var(--widthEmptyWishList) - var(--widthLeftEmptyWL) - var(--paddingLeftREWL));
+   
+    --heightWishListCard:15rem;
+    --heightImgWLC: 15rem;
+    --widthLeftWLC: 20vw;
+    --paddingLeftContentWLC: 2vw;
+    --paddingDeleteWLC: 1vw;
+    --widthContentWLC: calc( var(--widthEmptyWishList) - var(--widthLeftWLC) - var(--paddingLeftContentWLC) - var(--widthDeleteWLC) - var(--paddingDeleteWLC)*2);
+}
+.wishList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleWishList {
+    width: var(--widthEmptyWishList);
+    padding: 0 0.5rem 1rem 0.5rem;
+    margin: 2rem 0 4rem 0;
+    border-bottom: 0.05rem solid rgb(200, 200, 200);
+}
+
+.titleWishList h1 {
+    margin: 0;
+    font-size: clamp(1rem,1rem + 2vw,2rem);
+}
+
+.titleWishList h4 {
+    margin: 0.2rem 0 0 0;
+    font-size: clamp(0.5rem,0.5rem + 1vw,1rem);
+}
+
+.emptyWishList {
+    width: var(--widthEmptyWishList);
+    box-shadow: 0 0 1rem black;
+}
+
+.openRightEmptyWL {
+    height: var(--heightEmptyWishList);
+    padding: 0.5rem;
+    opacity: 1;
+    display: flex;
+}
+
+.closeRightEmptyWL {
+    height: 0;
+    padding: 0;
+    opacity: 0;
+    display: none;
+}
+
+.leftEmptyWL {
+    width: var(--widthLeftEmptyWL);
+    height: 15rem;
+    background-color: rgb(255, 144, 25);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.EmptyWLTransition{
+    transition: all 0.5s ease-in-out;
+}
+
+.imgEmptyWL {
+    width: 15rem;
+    height: 100%;
+}
+
+.classCloseImgEmptyWL{
+    height: 0rem;
+}
+.classOpenImgEmptyWL{
+    height: 15rem;
+}
+
+.rightEmptyWL {
+    width: var(--widthRightEmptyWL);
+    height: 100%;
+    padding-left: var(--paddingLeftREWL);
+}
+.rightEmptyWL h1{
+    font-size: clamp(1rem,1rem + 2vw,1.8rem);
+}
+.rightEmptyWL h3{
+    font-size: clamp(0.8rem,0.8rem + 1vw,1.2rem);
+}
+.wishListCard {
+    width: var(--widthEmptyWishList);
+    height: var(--heightWishListCard);
+    margin-bottom: 3rem;
+    padding: 0.5rem;
+    box-shadow: 0.5rem 0.5rem 1rem #888888,
+        -0.5rem -0.5rem 0.5rem #ffffff;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.wishListCard:hover {
+    box-shadow: 0.5rem 0.5rem 1rem rgba(255, 100, 0, 0.5),
+        -0.5rem -0.5rem 0.5rem rgba(255, 230, 207, 0.5);
+}
+
+.linkWishListCard {
+    width: 100%;
+    height: 100%;
+}
+
+.wishListCardContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    position: relative;
+}
+
+.leftWLC {
+    width: var(--widthLeftWLC);
+    height: var(--heightImgWLC);
+}
+
+.imgWLC {
+    width: 100%;
+    height: 100%;
+}
+
+.contentWLC {
+    width: var(--widthContentWLC);
+    height: 100%;
+    padding-left: var(--paddingLeftContentWLC);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.eachRWLC {
+    font-size: clamp(1rem,1vw,1.2rem);
+    padding: 0 0 0.4rem 0;
+    color: rgb(255, 111, 14);
+}
+
+.eachRWLC span {
+    font-style: italic;
+    color: rgb(100, 100, 100);
+}
+
+.titleRightWLC {
+    color: black;
+    font-size: clamp(0.9rem,1vw,1.2rem);
+    font-style: italic;
+    position: absolute;
+    bottom: 0;
+    color: rgb(200, 200, 200);
+    transition: all 0.2s ease-in-out;
+}
+
+.wishListCardContainer:hover .titleRightWLC {
+    color: rgb(255, 42, 0);
+}
+
+.deleteWLC {
+    width: 5vw;
+    height: 5vw;
+    padding: var(--paddingDeleteWLC);
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 135, 37);
+    box-shadow:  0.2rem 0.2rem 0.4rem #5a5a5a;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.deleteWLC:hover {
+    box-shadow:  0.2rem 0.2rem 0.5rem #ff802b;
+}
+
+.imgDeleteWLC {
+    width: clamp(3vw,3.5vw,5vw);
+    height: clamp(3vw,3.5vw,5vw);
+}
+
+.deleteWLC p {
+    margin: 0;
+    font-size: clamp(0.6rem,0.6rem + 1vw,1.2rem);
+}
+
+@media screen and (max-width: 1000px){
+    :root{
+        --heightEmptyWishList: fit-content;
+        --widthLeftEmptyWL: 60vw;
+        --widthRightEmptyWL: 60vw;
+        --paddingLeftREWL:0;
+        --heightWishListCard: clamp(28rem,28rem + 5vw,36rem);
+        --heightImgWLC: clamp(12rem,12rem + 2vw,18rem);
+        --widthLeftWLC: 60vw;
+        --widthContentWLC: 60vw;
+        --paddingLeftContentWLC: 0;
+        --widthDeleteWLC: 10vw;
+    }
+    .emptyWishList, .wishListCard, .wishListCardContainer{
+        flex-direction: column;
+    }
+    .wishListCardContainer{
+        height: 24rem;
+    }
+    .deleteWLC{
+        width: clamp(6rem,6rem + 2vw,10rem);
+        height: clamp(3rem,3rem + 2vw,3.5rem);
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+    .imgDeleteWLC {
+        width: clamp(2rem,2rem + 2vw,5rem);
+        height: clamp(2rem,2rem + 2vw,5rem);
+    }
+    .contentWLC{
+        height: clamp(11rem,2vw,15rem);
+    }
+}
