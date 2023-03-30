@@ -1,2 +1,2 @@
-export let arrBook = ['abc']
+export let arrBook = []
 export default arrBook
