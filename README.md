@@ -10,15 +10,15 @@ Users can create trip plans on the website. Examine the information on the attra
 To run this project in your device,clone the repository and open terminal in your editor. Followig are the requirements to run this project:
 
 ##### Code Examples
-Clone the project
+- Clone the project
 ```
 git clone https://github.com/NoisyBoiz/PTravel.git
 ```
-Go to the project directory
+- Go to the project directory
 ```
 cd TravelWeb 
 ```
-Install dependencies
+- Install dependencies
 ```
 npm install 
 ```
