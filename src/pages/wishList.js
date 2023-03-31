@@ -7,6 +7,7 @@ import CountrySub from '../data/CountrySub.js';
 function WishList() {
     let sizeDataWL = useRef(DataWL.length);
     const pageUp = () => window.scrollTo(0, 0);
+    // delete the favorite place
     function removeWishList(each){
         each.wishList = 0;
         let newArr = DataWL.filter((x) => x!==each);
@@ -28,6 +29,7 @@ function WishList() {
             document.getElementById("removeWishList"+each.country+each.counts).style.display="none";
         },900);
     }
+    // Add effect delete
     function checkDTLength(){
         if(sizeDataWL.current===0){
             document.getElementsByClassName('closeRightEmptyWL')[0].style.display="flex";
@@ -48,6 +50,7 @@ function WishList() {
     function checkWL(){
         if(DataWL.length>0){
             return (
+                // show off the favorite list
                 DataWL.map((each)=>{
                     return(
                         <div className='wishListCard' id={"removeWishList"+each.country+each.counts}>

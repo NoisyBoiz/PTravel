@@ -8,6 +8,7 @@ function BookList() {
   const pageUp = () => window.scrollTo(0, 0);
   function checkBL(){
     return (
+      // show off the list of bookings
       DataBook.map((each)=>{
           return(
             <div className='bookListCard'>

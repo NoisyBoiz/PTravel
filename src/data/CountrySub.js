@@ -1,3 +1,4 @@
+// translate name of country in English to Vietnamese
 function checkCountry(countryEng){
     switch (countryEng){
         case "VietNam": return "Việt Nam"; break;

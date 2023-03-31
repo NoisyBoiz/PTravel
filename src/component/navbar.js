@@ -4,6 +4,7 @@ import "../style/navbar.css"
 function Navbar() {
     const pageUp = () => window.scrollTo(0, 0);
     const [click,setClick] = useState(false);
+    // effect of switch pages
     const handleOn= () => setClick(true);
     const handleOut= () => setClick(false);
     let preNavBar = useRef("home");

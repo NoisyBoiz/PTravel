@@ -6,6 +6,7 @@ import DataWL from  '../data/DataWishList.js'
 import DataBook from '../data/DataBook.js'
 
 function Describe(){
+    // Create new object save the info of the booking
     class CreNewBook{
         constructor(name,email,phone,date,time,timeBook,timeBookSecond,ticketAdult,costTAdult,ticketChildren,costTChildren,message,costTotal,infoPlace){
             this.name = name;
@@ -34,9 +35,11 @@ function Describe(){
     let ticketChildren = useRef(0);
     let costTotal = useRef(0);
     let y = useRef(0);
+
     const [addTWish,setAddTWish] = useState(Number(wishList));
     const handleAddTWish = (each) => {
         setAddTWish(!addTWish);
+        //Remove favorite place in favorite list
         if(each.wishList) {
             each.wishList = 0;
             let newArr = DataWL.filter((x) => x!==each);
@@ -44,11 +47,13 @@ function Describe(){
             for(let i=0;i<lenDataWL;i++) DataWL.pop();
             for(let i=0;i<newArr.length;i++) DataWL.push(newArr[i]);
         }
+        // Add favorite place in favorite list
         else {
             each.wishList = 1;
             if(DataWL.findIndex((x) => x===each) === -1) DataWL.unshift(each);
         }
     }
+    // sum the price ticket
     function sumTicketAdult(costA){
         ticketAdult.current = Number(document.getElementsByName('ticketAdult')[0].value);
         costTAdult.current = ticketAdult.current * Number(costA);
@@ -63,6 +68,7 @@ function Describe(){
         costTotal.current = costTAdult.current + costTChildren.current;
         document.getElementById('resultTotalBook').innerHTML =  costTotal.current + "$";
     }
+    // Check and save the information in the booking list.
     function acceptBook(each){
         let checked = 1;
         let name = document.getElementsByName('name');
@@ -112,6 +118,7 @@ function Describe(){
             else document.getElementsByClassName('ticketBook')[0].classList.remove("ticketBookBorder");
         }
     }
+    // Show off congratulations message
     function handleAlert(n){
         if(n===1){
             let alert = document.getElementsByClassName('alertComfirmBook');
@@ -133,6 +140,7 @@ function Describe(){
         window.scrollTo(0,y.current);
     }
     return(
+        // Show off information about the place
         Data.map((each)=>{
             if(each.country===countryName&&each.counts===Number(ccounts)){
                 return(

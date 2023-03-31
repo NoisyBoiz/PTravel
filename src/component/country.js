@@ -8,6 +8,7 @@ function Country() {
     let {country} = useParams();
     const pageUp = () => window.scrollTo(0, 0);
     return (
+        // show the place list
         <div className='country'>
             <div className='countryContainer'>
             <div className='topContent'> - <CountrySub countryEng={country} /> - </div>

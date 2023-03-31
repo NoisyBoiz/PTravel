@@ -7,6 +7,7 @@ import CountrySub from '../data/CountrySub';
 function DetailBookList() {
     const pageUp = ()=> window.scrollTo(0, 0);
     let {timeBookSecond} = useParams();
+    // delete the booking
     function deleteBook(each){
         let newArr = DataBook.filter((x) => x!==each);
         let lenDataBL=DataBook.length;
@@ -20,6 +21,7 @@ function DetailBookList() {
         }
     }
     return (
+    // show off the information of the booking
     DataBook.map((each)=>{
         if(each.timeBookSecond === Number(timeBookSecond)){
             return(

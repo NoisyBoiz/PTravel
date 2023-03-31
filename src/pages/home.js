@@ -13,6 +13,7 @@ function Home(){
         slide.current.style.transform = 'translate(' + (-100 * counts.current) +'vw)';
         document.getElementById('buttonSlide'+counts.current).style.backgroundColor = "#7b7b7b";
     },[])
+    // back to the first image 
     function checkEndOfImage(){
         setTimeAni.current = setTimeout(()=>{
             if(counts.current >= img.current.length-1){
@@ -22,6 +23,7 @@ function Home(){
             }
         },1000);
     }
+    // auto scroll to the next picture
     const autoNext = useCallback(()=>{
         setTime.current = setTimeout(()=>{
             slide.current.style.transition = "transform 1s ease-in-out";
@@ -36,7 +38,7 @@ function Home(){
     useEffect(()=>{
         autoNext();
     },[autoNext]);
-    
+    // scroll to the picture of the selected client
     function slideShow(n){
         counts.current = n;
         clearTimeout(setTime.current);
@@ -48,6 +50,7 @@ function Home(){
         checkEndOfImage();
         if(checkSetTime.current===0) autoNext();
     }
+    
     const slideBackgroundColor = ()=>{
         document.querySelectorAll('.buttonSlide').forEach(Element => {
             Element.style.backgroundColor="white";

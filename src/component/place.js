@@ -2,6 +2,7 @@ import React from 'react'
 import '../style/place.css'
 function place({each}) {
     return (
+        // show the information of place
         <div className='placeContainer'>
         <div className='topPlaceContainer'> <img src = {each.image} alt={each.placeName} className="imageDemo"/> </div>
             <div className='bottomPlaceContainer'>
