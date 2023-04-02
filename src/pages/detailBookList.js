@@ -22,10 +22,10 @@ function DetailBookList() {
     }
     return (
     // show off the information of the booking
-    DataBook.map((each)=>{
+    DataBook.map((each,index)=>{
         if(each.timeBookSecond === Number(timeBookSecond)){
             return(
-                <div className='detailBookList'>
+                <div className='detailBookList' key={index}>
                 <Link to="/bookList" className='closeDetailBL'> Quay Lại </Link>  
                     <div className='leftDetailBL'>
                         <div className='titleDetailBL'> 
@@ -42,7 +42,7 @@ function DetailBookList() {
                             <div className='eachLeftDBL'><span>Số vé trẻ em: </span> {each.ticketChildren} <span>vé </span><p>(</p> {each.costTChildren}$ <p>)</p></div>
                             <div className='eachLeftDBL'><span>Tin nhắn: </span> {each.message} </div>
                             <div className='eachLeftDBL'><span>Tổng chi phí: </span> {each.costTotal}$ </div>
-                            <div className='deleteBook' onClick={()=>checkDelete(each)}> <i class="fa-solid fa-plane-slash"></i> Hủy chuyến đi </div>
+                            <div className='deleteBook' onClick={()=>checkDelete(each)}> <i className="fa-solid fa-plane-slash"></i> Hủy chuyến đi </div>
                         </div>
                     </div>
                     <div className='rightDetailBL'>

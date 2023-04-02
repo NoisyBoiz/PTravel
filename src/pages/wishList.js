@@ -51,9 +51,9 @@ function WishList() {
         if(DataWL.length>0){
             return (
                 // show off the favorite list
-                DataWL.map((each)=>{
+                DataWL.map((each,index)=>{
                     return(
-                        <div className='wishListCard' id={"removeWishList"+each.country+each.counts}>
+                        <div className='wishListCard' id={"removeWishList"+each.country+each.counts} key={index}>
                             <Link to={"/"+each.country+"/"+each.counts+"/"+each.wishList} onClick={pageUp} className="linkWishListCard">
                                 <div className='wishListCardContainer'>
                                     <div className='leftWLC'> <img src={each.image} alt={each.placeName} className="imgWLC"/> </div>

@@ -15,7 +15,7 @@ function Country() {
                 {Data.map((each) =>{
                     if(each.country === country){
                         return(
-                            <Link to={"/"+each.country+"/"+each.counts+"/"+each.wishList} onClick={pageUp}>
+                            <Link key={each.counts} to={"/"+each.country+"/"+each.counts+"/"+each.wishList} onClick={pageUp}>
                                 <div className='place'>
                                     <Place each={each}/>
                                 </div>

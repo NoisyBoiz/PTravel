@@ -141,24 +141,24 @@ function Describe(){
     }
     return(
         // Show off information about the place
-        Data.map((each)=>{
+        Data.map((each,index)=>{
             if(each.country===countryName&&each.counts===Number(ccounts)){
                 return(
-                    <>
-                    <div className='describle'>
+                    <div key={index}>
+                    <div className='describle' >
                     <div className='describleContainer'>
                     <div className='closeDescrible' onClick={() => navigate(-1)}>Quay Lại</div> 
                     <div className='leftDescrible'>
                     <div className='topLeftDescrible'>
                         <div className='iconTLDTitle'>
-                            <div className='addTWishContainer' onClick={() => handleAddTWish(each)}> <i class="fa-solid fa-heart" id={addTWish?"selectIconAddTWish":"unselectIconAddTWish"} ></i>  <span id={addTWish?"selectSpanAddTWish":"unselectSpanAddTWish"} > Thêm vào bộ sưu tập </span> </div>
+                            <div className='addTWishContainer' onClick={() => handleAddTWish(each)}> <i className="fa-solid fa-heart" id={addTWish?"selectIconAddTWish":"unselectIconAddTWish"} ></i>  <span id={addTWish?"selectSpanAddTWish":"unselectSpanAddTWish"} > Thêm vào bộ sưu tập </span> </div>
                             <div className='shareContainer'> 
-                                <div><i class="fa fa-share-alt"></i> <span> Chia sẻ </span> </div>
-                                    <ul class="iconShareContainer">
-                                    <li><i class="fa fa-facebook"></i></li>
-                                    <li><i class="fa fa-twitter"></i></li>
-                                    <li><i class="fa fa-instagram"></i> </li>
-                                    <li><i class="fa-brands fa-linkedin-in"></i></li>
+                                <div><i className="fa fa-share-alt"></i> <span> Chia sẻ </span> </div>
+                                    <ul className="iconShareContainer">
+                                    <li><i className="fa fa-facebook"></i></li>
+                                    <li><i className="fa fa-twitter"></i></li>
+                                    <li><i className="fa fa-instagram"></i> </li>
+                                    <li><i className="fa-brands fa-linkedin-in"></i></li>
                                 </ul>
                             </div>                 
                         </div>
@@ -225,7 +225,7 @@ function Describe(){
         </div>
         <div className='alertComfirmBook'>
             <div className='alertComfirmBookContainer'> 
-                <i class="fa-solid fa-circle-check"></i>
+                <i className="fa-solid fa-circle-check"></i>
                 <span>
                 <h1> Chúc mừng </h1>
                 <h3> Bạn đã đặt chuyến đi thành công</h3>
@@ -233,7 +233,7 @@ function Describe(){
                 <div onClick={()=>handleAlert()}> Tiếp tục </div>
             </div>
         </div>
-        </>
+        </div>
         )}
         else return null;
         })

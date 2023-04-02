@@ -9,9 +9,9 @@ function BookList() {
   function checkBL(){
     return (
       // show off the list of bookings
-      DataBook.map((each)=>{
+      DataBook.map((each,index)=>{
           return(
-            <div className='bookListCard'>
+            <div className='bookListCard' key={index}>
               <Link to={"/detailBookList/"+ String(each.timeBookSecond) } onClick={pageUp} className="linkBookListCard">
                 <div className='bookListCardContainer'>
                 <div className='leftBookLC'> <img src={each.infoPlace.image} alt={each.infoPlace.placeName} className="imgBookLC"/> </div>
