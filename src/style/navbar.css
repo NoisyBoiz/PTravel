@@ -49,6 +49,7 @@
 }
 
 .textNavBar:hover {
+    cursor: pointer;
     border-color: #FD5825;
 }
 .dropDown {
@@ -78,6 +79,7 @@
 }
 
 .eachDrop:hover {
+    cursor: pointer;
     border-color: #FD5825;
 }
 

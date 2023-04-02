@@ -35,6 +35,7 @@
 }
 
 .closeDescrible:hover {
+    cursor: pointer;
     background-color: rgb(255, 120, 0);
     color: rgb(255, 255, 255);
 }
@@ -59,23 +60,26 @@
 
 .addTWishContainer {
     padding: 0.5rem;
-    cursor: pointer;
     transition: all 0.5s ease-in-out;
 }
 
 .addTWishContainer:hover {
+    cursor: pointer;
     box-shadow: 0 0 0.5rem rgb(200, 200, 200);
 }
 
 .addTWishContainer:hover span {
+    cursor: pointer;
     color: red;
 }
 
 .addTWishContainer:hover #unselectIconAddTWish {
+    cursor: pointer;
     text-shadow: 0 0 0.2rem red;
 }
 
 .addTWishContainer:hover #unselectSpanAddTWish {
+    cursor: pointer;
     color: red;
 }
 
@@ -110,6 +114,7 @@
 }
 
 .shareContainer:hover {
+    cursor: pointer;
     box-shadow: 0 0 0.5rem rgb(200, 200, 200);
 }
 
@@ -127,6 +132,7 @@
 }
 
 .shareContainer:hover div {
+    cursor: pointer;
     color: rgb(0, 247, 255);
 }
 
@@ -143,6 +149,7 @@
 }
 
 .shareContainer:hover .iconShareContainer {
+    cursor: pointer;
     width: fit-content;
 }
 
@@ -160,27 +167,32 @@
 }
 
 .shareContainer:hover li {
+    cursor: pointer;
     opacity: 1;
     transform: translateX(0);
     border-left: 0.1rem dashed rgb(230, 230, 230);
 }
 
 .iconShareContainer li:nth-child(1):hover {
+    cursor: pointer;
     background-color: rgb(255, 61, 132);
     color: rgb(255, 255, 255);
 }
 
 .iconShareContainer li:nth-child(2):hover {
+    cursor: pointer;
     background-color: rgb(255, 251, 32);
     color: rgb(255, 255, 255);
 }
 
 .iconShareContainer li:nth-child(3):hover {
+    cursor: pointer;
     background-color: rgb(35, 255, 112);
     color: rgb(255, 255, 255);
 }
 
 .iconShareContainer li:nth-child(4):hover {
+    cursor: pointer;
     background-color: rgb(0, 229, 255);
     color: rgb(255, 255, 255);
 }
@@ -230,6 +242,7 @@
 .imageDescrible {
     width: 100%;
     height: var(--heightImageDescrible);
+    border-radius: 0.8rem;
 }
 
 .bottomLeftDescrible {
@@ -425,32 +438,10 @@
 }
 
 .acceptBook:hover {
+    cursor: pointer;
     background-color: rgb(255, 255, 255);
     color: rgb(255, 120, 0);
 }
-
-/* scrollbar style */
-/* 
-.describleContainer::-webkit-scrollbar-track{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: #ffffff;
-}
-.describleContainer::-webkit-scrollbar{
-	width: 10px;
-	background-color: #ffffff;
-}
-.describleContainer::-webkit-scrollbar-thumb{
-	background-image: -webkit-gradient(linear,left bottom,left top,
-									   color-stop(0.44, rgb(122,153,217)),
-									   color-stop(0.72, rgb(73,125,189)),
-									   color-stop(0.86, rgb(28,58,148)));
-}
-.describleContainer::-webkit-scrollbar-thumb:hover{
-	background-image: -webkit-gradient(linear,left bottom,left top,
-									   color-stop(0.44, rgb(103, 140, 215)),
-									   color-stop(0.72, rgb(32, 107, 200)),
-									   color-stop(0.86, rgb(0, 44, 175)));
-} */
 
 .alertComfirmBook {
     width: 100vw;
@@ -515,6 +506,7 @@
 }
 
 .alertComfirmBookContainer div:hover {
+    cursor: pointer;
     color: rgb(255, 132, 23);
     background-color: rgb(255, 255, 255);
 }

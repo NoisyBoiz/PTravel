@@ -45,28 +45,34 @@
 }
 
 .twitter:hover {
+    cursor: pointer;
+    background-color: rgb(0, 173, 230);
+    box-shadow: 0 0 0.8rem rgb(0, 173, 230);
+  
+}
+
+.facebook:hover {
+    cursor: pointer;
+    background-color: rgb(0, 173, 230);
+    box-shadow: 0 0 0.8rem rgb(0, 173, 230);
+}
+
+.instagram:hover {
+    cursor: pointer;
     background-color: rgb(255, 2, 120);
     box-shadow: 0 0 0.8rem rgb(255, 2, 120);
 }
 
-.facebook:hover {
-    background-color: rgb(230, 230, 0);
-    box-shadow: 0 0 0.8rem rgb(230, 230, 0);
-}
-
-.instagram:hover {
-    background-color: rgb(120, 255, 0);
-    box-shadow: 0 0 0.8rem rgb(120, 255, 0);
-}
-
 .linkedin:hover {
-    background-color: rgb(0, 150, 255);
-    box-shadow: 0 0 0.8rem rgb(0, 150, 255);
+    cursor: pointer;
+    background-color: rgb(0, 173, 230);
+    box-shadow: 0 0 0.8rem rgb(0, 173, 230);
 }
 
 .mail:hover {
-    background-color: rgb(170, 0, 255);
-    box-shadow: 0 0 0.8rem rgb(170, 0, 255);
+    cursor: pointer;
+    background-color: rgb(255, 196, 0);
+    box-shadow: 0 0 0.8rem rgb(255, 196, 0);
 }
 @media screen and (max-width: 1000px) {
     .footerContent {

@@ -169,9 +169,11 @@
     background-color: rgb(0, 210, 255);
 }
 .endMoutainImageCard:hover {
+    cursor: pointer;
     background-color: rgb(205, 0, 70);
 }
 .endBeachImageCard:hover {
+    cursor: pointer;
     background-color: rgb(0, 160, 215);
 }
 .endMoutainImageCard p, .endBeachImageCard p {
@@ -184,6 +186,7 @@
     transition: all 0.5s ease-in-out;
 }
 .endMoutainImageCard:hover p, .endBeachImageCard:hover p {
+    cursor: pointer;
     right: calc(var(--widthImageCard)*0.1);
     color: white;
     text-shadow: 0 0 1rem white;
@@ -202,6 +205,7 @@
 }
 
 .endMoutainImageCard:hover p::before,.endBeachImageCard:hover p::before, .endForestImageCard:hover p::before {
+    cursor: pointer;
     opacity: 1;
     left: -1.2rem;
 }
@@ -239,10 +243,12 @@
 }
 
 .endForestImageCard:hover {
+    cursor: pointer;
     background-color: rgb(200, 200, 0);
 }
 
 .endForestImageCard:hover p {
+    cursor: pointer;
     left: calc(var(--widthImageCard)*0.2);
     color: white;
     text-shadow: 0 0 1rem white;
@@ -326,6 +332,7 @@
 }
 
 #titleCardRMCButton1:hover {
+    cursor: pointer;
     box-shadow: 0 0 1rem #ff006a;
 }
 
@@ -334,6 +341,7 @@
 }
 
 #titleCardRMCButton2:hover {
+    cursor: pointer;
     box-shadow: 0 0 1rem #ffb222;
 }
 
@@ -350,6 +358,7 @@
 }
 
 #titleCardRMCButton4:hover {
+    cursor: pointer;
     box-shadow: 0 0 1rem #00ff44;
 }
 
@@ -358,6 +367,7 @@
 }
 
 #titleCardRMCButton5:hover {
+    cursor: pointer;
     box-shadow: 0 0 1rem #00d5ff;
 }
 
@@ -366,6 +376,7 @@
 }
 
 #titleCardRMCButton6:hover {
+    cursor: pointer;
     box-shadow: 0 0 1rem rgb(250, 0, 255);
 }
 
@@ -402,6 +413,7 @@
     margin: var(--marginBoxHBC) 0 0 var(--marginBoxHBC);
 }
 .boxHBC:hover {
+    cursor: pointer;
     background-size: 108% 108%;
 }
 .boxHBC::after{
