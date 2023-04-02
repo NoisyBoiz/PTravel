@@ -4,7 +4,7 @@ Users can create trip plans on the website. Examine the information on the attra
 
 ## WebSite :globe_with_meridians:
 
-[http://ptravel.epizy.com/](http://ptravel.epizy.com/)
+[http://ptravel.x10.mx/](http://ptravel.x10.mx/)
 
 ## Usage :computer:
 To run this project in your device,clone the repository and open terminal in your editor. Followig are the requirements to run this project:
